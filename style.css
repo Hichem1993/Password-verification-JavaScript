@@ -6,3 +6,99 @@
     box-sizing: border-box;
     font-family: "Roboto", serif;
 }
+
+body{
+    background-color: #675afe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Stylisé le container pour les entrées */
+
+.container{
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 12px;
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* Personnaliser le bouton */
+input[type=submit] {
+    background-color: #675afe;
+    color: white;
+    border: 1px solid #675afe;
+}
+
+/* Personnaliser le boite msg */
+#message{
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    width: 400px;
+    padding: 20px;
+    color: #000;
+    position: relative;
+    margin-top: 20px;
+    letter-spacing: 0.7px;
+    animation: anime 0.5s ease-out;
+}
+
+/* Animation */
+@keyframes anime {
+    from{
+        transform: translateY(100px);
+    }
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 400 ;
+}
+
+#message p {
+    margin-left: 8px;
+    padding: 7px 0;
+    font-size: 15px;
+}
+
+/* Lorsque les exigences sont érronées */
+.invalid{
+    color: red;
+}
+
+.invalid::before{
+    position: relative;
+    left: -7px;
+    content: "✕";
+}
+
+
+/* Lorsque les exigences sont respectées */
+.valid{
+    color: green;
+}
+
+.valid::before{
+    position: relative;
+    left: -7px;
+    content: "✓";
+}
